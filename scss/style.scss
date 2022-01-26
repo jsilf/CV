@@ -1,0 +1,13 @@
+@import '_variables-extend';
+
+// stylesheet mobile //
+@import '_base';
+
+// stylesheet tablet //
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    @import '_tablet';
+}
+// stylesheet desktop //
+@media screen and (min-width: 1024px) {
+    @import '_desktop';
+}

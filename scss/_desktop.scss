@@ -1,0 +1,43 @@
+.container {
+max-width: 2560px;
+display: grid;
+column-gap: 2rem;
+row-gap: 1rem;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 0.1fr 1.1fr 0.4fr 0.7fr 0.1fr;
+grid-template-areas: 
+"header header header header header header"
+"intro intro intro intro intro intro"
+"education education experience experience skills skills"
+"about about about about about about"
+". . contact contact . .";
+    h3 {
+        font-size: 1.7rem;
+    }
+    li {
+        font-size: 1.3rem;
+    }
+    &__intro {
+        #logo {
+        width: 400px;
+        height: 400px; 
+        }
+        .intro__menu {
+            width: 50%;
+        }
+        .intro__menu-ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .intro__menu-link {
+            font-size: 3rem;
+            list-style-type: none;
+        }
+    }
+    &__about {
+        p {
+            margin: 2% 25%;
+            font-size: 1.4rem;
+        }
+    }
+}

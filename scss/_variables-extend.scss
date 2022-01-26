@@ -1,0 +1,17 @@
+$primary-color: rgb(241, 250, 238); 
+
+$font-stack: 'Spartan', sans-serif;
+
+%list-shared { 
+    list-style-type: circle;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  %h3-shared {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+    background-color: rgb(69, 123, 157);
+    border-radius: 25px;
+  }
