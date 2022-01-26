@@ -4,19 +4,16 @@ display: grid;
 column-gap: 2rem;
 row-gap: 1rem;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-grid-template-rows: 0.1fr 1.1fr 0.4fr 0.7fr 0.1fr;
+grid-template-rows: 0.1fr 1.1fr 0.4fr 0.7fr 1fr 0.1fr;
 grid-template-areas: 
 "header header header header header header"
 "intro intro intro intro intro intro"
 "education education experience experience skills skills"
 "about about about about about about"
+"portfolio portfolio portfolio portfolio portfolio portfolio"
 ". . contact contact . .";
-    h3 {
-        font-size: 1.7rem;
-    }
-    li {
-        font-size: 1.3rem;
-    }
+    h3 {font-size: 1.7rem;}
+    li {font-size: 1.3rem;}
     &__intro {
         #logo {
         width: 400px;

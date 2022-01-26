@@ -21,7 +21,7 @@ export function menu() {
     introTitle.className = "intro__title";
     introTitle.innerText = "Front end developer student";
 
-    const introMenuItems = ["about me", "portfolio", "contact"];
+    const introMenuItems = ["om mig", "portfolio", "kontakt"];
 
     const introMenu = document.createElement("div");
     introMenu.className = "intro__menu-ul";
@@ -45,45 +45,15 @@ export function menu() {
                 // contact().remove();
             } else if (introMenuIndex === "portfolio") {
                 console.log("portfolio");
+                portfolio();
             } else if (introMenuIndex === "contact") {
                 console.log("contact");
+                contact();
             }
         });
     }
 
 
-
-
-
     containerIntro.append(introLogo, introName, introTitle, introMenu);
-
-
-
-    //     let sunvsmoon = document.createElement("img");
-    //     sunvsmoon.id = ”sunvsmoon”;
-    //     sunvsmoon.src = ”sun.jpg”;
-
-    //     document.body.append(sunvsmoon);
-
-    //     sunvsmoon.addEventListener(”click”, () => {
-    //         console.log(”click på knapp”);
-
-    //         console.log(sunvsmoon.getAttribute(”src”));
-
-    //         If(sunvsmoon.getAttribute(”src”) === ”sun.jpg”) {
-
-    //             console.log(”det var en sol”);
-    //     sunvsmoon.setAttribute(”src”, ”moon.jpg”);
-    // } else {
-
-    //     console.log(”det var inte en sol”);
-    //     sunvsmoon.setAttribute(”src”, ”sun.jpg”);
-    // }
-    // });
-
-
-
-
-
 }
 

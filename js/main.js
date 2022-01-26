@@ -28,7 +28,7 @@ let menuContainer = document.getElementById("menu__container");
 
 function myMenuButton() {
 
-    const menuItems = ["home", "about me", "portfolio", "contact"];
+    const menuItems = ["startsida", "om mig", "portfolio", "kontakt"];
 
     menuButton.addEventListener("click", () => {
         menuContainer.innerHTML = "";
@@ -44,16 +44,18 @@ function myMenuButton() {
             menuContainer.append(menuUL);
             let menuInd = menuItems[i];
 
-            if (menuLink != menuInd) {
+            if (menuLink) {
                 menuLink.innerText = menuItems[i];
-            } else {
+
+            } else if (menuLink === menuItems[i]) {
+                location.reload();
                 console.log("visa ej meny");
             }
             menuLink.addEventListener("click", () => {
-                console.log("gå in på den här sidan: ", menuInd);
+                console.log(menuInd);
             });
 
         }
     });
 }
-// myMenuButton();
+myMenuButton();

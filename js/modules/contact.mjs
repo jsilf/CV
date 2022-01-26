@@ -18,7 +18,7 @@ export function contact() {
 
     const contactProfileImg = document.createElement("img");
     contactProfileImg.src = "./img/profilbild1.jpg";
-    contactProfileImg.className = "about__img";
+    contactProfileImg.className = "contact__img";
 
     const linkedinLink = document.createElement("a");
     linkedinLink.setAttribute("href", "https://www.linkedin.com/in/jessica-silfver");

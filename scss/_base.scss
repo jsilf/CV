@@ -38,7 +38,7 @@ a {
     position: relative;
     display: flex;
     top: 130px;
-    left: 300px;
+    right: 30px;
     text-align: center;
   }
   li { 
@@ -66,7 +66,7 @@ a {
   display: grid;
   max-width: 768px;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.05fr 0.75fr 0.25fr 0.25fr 0.25fr 1fr 0.1fr;
+  grid-template-rows: 0.05fr 0.75fr 0.25fr 0.25fr 0.25fr 1fr 1fr 0.1fr;
   column-gap: 0.5rem;
   row-gap: 0.5rem;
   grid-template-areas: 
@@ -76,6 +76,7 @@ a {
   "experience"
   "skills"
   "about"
+  "portfolio"
   "contact";
 
   // header //
@@ -83,7 +84,6 @@ a {
     grid-area: header;
     display: flex;
     justify-content: flex-end;
-   
   }
   // logo with name and title //
   &__intro {
@@ -108,11 +108,50 @@ a {
       text-shadow: 3px 3px rgb(31, 31, 31);
     }
     #logo {
+      position: relative;
+      left: 300px;
       max-width: 100%;
-      height: auto;
-      margin-bottom: 5vh;
+      width: 400px;
+      height: 400px;
+      margin-bottom: 50px;
       background-position: center;
-      animation: wobble 3s ease-in-out;    
+      // animation: wobble 3s ease-in-out;    
+    }
+    .intro__menu-ul {
+      display: flex;
+      flex-direction:row;
+      justify-content: center;
+      padding: 4%;
+    }
+    .intro__menu-link {
+      font-family: $font-stack;
+      font-weight: 400;
+      padding-top: 2rem;
+      margin: 0 3rem;
+      font-size: 3.2rem;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      top: 0;
+    }
+    .intro__menu-link::after, .intro__menu-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+    .intro__menu-link:hover::after {
+      color: rgb(230, 112, 121);
+      transform: scaleX(1);
+      transform-origin: left;
     }
     // animation logo //
     @keyframes wobble {
@@ -134,14 +173,8 @@ a {
     grid-area: education;
     display: flex;
     flex-direction: column;
-    .education__list {@extend %list-shared;}
-    h3 {
-      text-align: center;
-      font-size: 1.5rem;
-      margin: 0;
-      background-color: rgb(69, 123, 157);
-      border-radius: 25px;
-    }
+    .education__list {@include list-shared;}
+    h3 {@include h3-shared;}
   }
   // second article from top //
   &__experience {
@@ -150,8 +183,8 @@ a {
     flex-direction: column;
     flex-wrap: wrap;
 
-    .experience__list {@extend %list-shared;}
-    h3 {@extend %h3-shared;}
+    .experience__list {@include list-shared;}
+    h3 {@include h3-shared;}
   }
   // third article from top //
   &__skills {
@@ -159,8 +192,8 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    .skills__list {@extend %list-shared;}
-    h3 {@extend %h3-shared;}
+    .skills__list {@include list-shared;}
+    h3 {@include h3-shared;}
   }
   // fourth article from top + profile picture //
   &__about {
@@ -169,7 +202,7 @@ a {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    h3 {@extend %h3-shared;}
+     h3 {@include h3-shared;}
     p {
       text-align: center;
       font-size: 1.1rem;
@@ -179,8 +212,21 @@ a {
     figure {align-self: center;}
     
   }
+   // header //
+   &__portfolio {
+    grid-area: portfolio;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem;
+    .portfolio__link {
 
-  
+      text-align: center;
+      border: solid rgba(230, 57, 70, 0.9) 3px;
+      padding: 1rem;
+      margin: 2rem;
+    }
+  } 
   // footer + contact info //
   &__contact {
     grid-area: contact;
@@ -189,8 +235,8 @@ a {
     align-items: center;
     border: 0.3rem solid rgb(230, 57, 70);
     border-radius: 30px;
-    width: 50vw;
-    height: 60vh;
+    width: 350px;
+    height: 550px;
     padding: 3%;
     margin: 5%;
     h4 {
@@ -204,7 +250,7 @@ a {
       align-items: center;
       font-size: 1rem;
     }
-    .contact__mail, .contact__tel {
+    .contact__mail {
       text-decoration: none;
       color: white;
       position: relative;
@@ -212,7 +258,7 @@ a {
       margin: 2%;
       padding: 1%;
     }
-    .contact__mail::after, .contact__tel::after {
+    .contact__mail::after{
       content: '';
       position: absolute;
       left: 0;
@@ -224,7 +270,7 @@ a {
       transform-origin: right;
       transition: transform 250ms ease-in;
     }
-    .contact__mail:hover::after, .contact__tel:hover::after {
+    .contact__mail:hover::after {
       color: rgb(230, 112, 121);
       transform: scaleX(1);
       transform-origin: left;
@@ -235,13 +281,14 @@ a {
       margin: 4px;
     }
     .fab:hover {color: rgb(230, 112, 121);}
+  
+    .contact__img {
+      border-radius: 50%;
+      box-shadow: 0rem 0rem 1rem 1rem rgba(230, 57, 70, 0.9);
+      margin-top: 4vh;
+      width: 250px;
+      height: 250px;
     }
-  .about__img {
-    border-radius: 50%;
-    box-shadow: 0rem 0rem 1rem 1rem rgba(230, 57, 70, 0.9);
-    margin-top: 4vh;
-    width: 250px;
-    height: 250px;
   }
 }
   
