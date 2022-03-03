@@ -1,12 +1,26 @@
 /*------------------
 CREATE ABOUT ME PAGE
 --------------------*/
+export const containerAbout = document.createElement("section");
 
-import { container } from '../main.js';
 
 export function about() {
+    containerAbout.innerHTML = "";
 
-    const education = ["2021-2023 Front end developer, Medieinstitutet", "2014-2015 Arkitektur och design, Nyckelviksskolan", "2013-2014 Grundutbildning konst, Basis konstskola"];
+
+    //Skippa eller ha på alla sidor??
+    const line = document.createElement("hr");
+    containerAbout.prepend(line);
+
+    /*-------- 
+    UTBILDNING
+    ---------*/
+    const education = [
+        "2021-2023 Front end developer, Medieinstitutet",
+        "2014-2015 Arkitektur och design, Nyckelviksskolan",
+        "2013-2014 Grundutbildning konst, Basis konstskola",
+        "2007-2010 Mode och design, St Martins gymnasium"
+    ];
 
     const containerEducation = document.createElement("article");
     containerEducation.className = "container__education";
@@ -21,7 +35,14 @@ export function about() {
         educationUl.append(educationList);
     }
 
-    const experience = ["2019-2021 Kontorsassistent, Nivå Landskapsarkitektur", "2016-2019 Butiksmedarbetare, BAUHAUS", "2015-2016 Värvare, UNHCR"];
+    /*-------- 
+    ERFARENHET
+    ---------*/
+    const experience = [
+        "2019-2021 Kontorsassistent, Nivå Landskapsarkitektur",
+        "2016-2019 Butiksmedarbetare, BAUHAUS",
+        "2015-2016 Värvare, UNHCR"
+    ];
 
     const containerExperience = document.createElement("article");
     containerExperience.className = "container__experience";
@@ -36,7 +57,16 @@ export function about() {
         experienceUl.append(experienceList);
     }
 
-    const skills = ["HTML", "CSS/SASS", "Javascript", "Typescript", "Angular"];
+    /*------- 
+    KOMPETENS
+    --------*/
+    const skills = [
+        "HTML",
+        "CSS/SASS",
+        "Javascript",
+        "Typescript",
+        "Angular"
+    ];
 
     const containerSkills = document.createElement("article");
     containerSkills.className = "container__skills";
@@ -50,10 +80,12 @@ export function about() {
         containerSkills.append(skillUl);
         skillUl.append(skillList);
     }
+    /*----- 
+    OM MIG
+    ------*/
 
-    const containerAbout = document.createElement("article");
-    containerAbout.className = "container__about";
-    containerAbout.innerHTML = "<h3>Om mig</h3>" + "<p>Extraction in single shot single origin, frappuccino redeye half and half medium french press.</p>";
-
-    container.append(containerEducation, containerExperience, containerSkills, containerAbout);
+    const containerAboutMe = document.createElement("article");
+    containerAboutMe.className = "container__about";
+    containerAboutMe.innerHTML = "<h3>Om mig</h3>" + "<p>Jag studerar just nu till front end developer/webbutvecklare distans på Medieinstitutet och tar examen juni 2023. I utbildningen får jag lära mig grunden till modern webbutveckling: HTML, CSS/SASS, Javascript, Angular och Reactjs. Söker alltid nya utmaningar och sätt att utvecklas. Har ett stort intresse för design, teknik och problemlösning. Tidigare har jag arbetat inom service och kontor och studerar nu för att utvecklas mer tekniskt och kreativt i min yrkesroll. Har även studerat konst och design och har dessa som mina hobbies.</p>";
+    containerAbout.append(containerAboutMe, containerEducation, containerExperience, containerSkills);
 }

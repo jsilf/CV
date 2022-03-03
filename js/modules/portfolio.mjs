@@ -1,30 +1,36 @@
-import { container } from '../main.js';
+export const repoContainer = document.createElement("article");
 
 /*------------------------------
 PORTFOLIO PAGE WITH GITHUB REPOS
 --------------------------------*/
 
 export function fetchRepositories() {
+    repoContainer.innerHTML = "";
     fetch("https://api.github.com/users/jsilf/repos")
         .then(response => {
             return response.json();
         })
         .then(json => {
+            repoContainer.className = "container__repos";
+            const repoWrap = document.createElement("div");
+            repoWrap.id = "githubRepos";
+            const repoUl = document.createElement("ul");
+            repoUl.id = "githubUl";
+            const repoHeading = document.createElement("h3");
+            repoHeading.innerText = "Mina Github repos";
+            repoContainer.append(repoHeading, repoWrap);
+            repoWrap.append(repoUl);
 
-            let repoContainer = document.createElement("article");
-            repoContainer.className = "container__portfolio";
-            repoContainer.id = "githubRepos";
-            container.append(repoContainer);
             for (let i = 0; i < json.length; i++) {
-                let githubLink = document.createElement("a");
-                githubLink.className = "portfolio__link";
-                repoContainer.append(githubLink);
-                githubLink.innerHTML = "";
-                githubLink.id = i;
-                githubLink.target = "_blank";
-                githubLink.setAttribute("href", json[i].html_url);
-                githubLink.innerHTML = json[i].name;
+                const link = document.createElement("a");
+                const liLink = document.createElement("li");
+                repoUl.append(liLink);
+                liLink.append(link);
+                link.id = i;
+                liLink.className = "repo__list";
+                link.target = "_blank";
+                link.setAttribute("href", json[i].html_url);
+                link.innerText = json[i].name;
             }
-            // console.log("Github API: ", json);
         });
 }

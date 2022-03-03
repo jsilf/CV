@@ -1,12 +1,11 @@
 /*--------------------
 CREATE CONTACT ME PAGE
 ----------------------*/
-
-import { container } from '../main.js';
+export const containerContact = document.createElement("footer");
 
 export function contact() {
+    containerContact.innerHTML = "";
 
-    const containerContact = document.createElement("footer");
     containerContact.className = "container__contact";
     const contactHeading = document.createElement("h4");
     contactHeading.innerText = "Kontakta mig";
@@ -30,6 +29,4 @@ export function contact() {
 
     address.append(contactMail, linkedinLink, githubLink);
     containerContact.append(contactHeading, address, contactProfileImg);
-    container.append(containerContact);
-
 }

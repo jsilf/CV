@@ -1,24 +1,24 @@
-.container {
-max-width: 1024px;
-display: grid;
-column-gap: 2rem;
-row-gap: 3rem;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr 0.1fr;
-grid-template-areas: 
-"header header header header"
-"intro intro intro intro"
-"education education about about"
-"experience experience about about"
-"skills skills about about"
-"contact contact about about";
-    &__intro {
-        margin-bottom: 30%;
-    }
-    &__about {
-        margin-bottom: 3%;
-    }
+// .container {
+// max-width: 1024px;
+// display: grid;
+// column-gap: 2rem;
+// row-gap: 3rem;
+// grid-template-columns: 1fr 1fr 1fr 1fr;
+// grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr 0.1fr;
+// grid-template-areas: 
+// "header header header header"
+// "intro intro intro intro"
+// "education education about about"
+// "experience experience about about"
+// "skills skills about about"
+// "contact contact about about";
+//     &__intro {
+//         margin-bottom: 30%;
+//     }
+//     &__about {
+//         margin-bottom: 3%;
+//     }
     
-}
+// }
 
 
