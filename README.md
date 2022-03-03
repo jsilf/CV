@@ -1,2 +1,3 @@
 # CV
-My resumé with HTML, CSS and javascript. WIP.
+Work in progress.
+My resumé with HTML, CSS/SCSS and Javascript.
