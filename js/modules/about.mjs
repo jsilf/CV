@@ -9,8 +9,8 @@ export function about() {
 
 
     //Skippa eller ha på alla sidor??
-    const line = document.createElement("hr");
-    containerAbout.prepend(line);
+    // const line = document.createElement("hr");
+    // containerAbout.prepend(line);
 
     /*-------- 
     UTBILDNING
@@ -65,7 +65,8 @@ export function about() {
         "CSS/SASS",
         "Javascript",
         "Typescript",
-        "Angular"
+        "Angular",
+        "React"
     ];
 
     const containerSkills = document.createElement("article");
@@ -86,6 +87,6 @@ export function about() {
 
     const containerAboutMe = document.createElement("article");
     containerAboutMe.className = "container__about";
-    containerAboutMe.innerHTML = "<h3>Om mig</h3>" + "<p>Jag studerar just nu till front end developer/webbutvecklare distans på Medieinstitutet och tar examen juni 2023. I utbildningen får jag lära mig grunden till modern webbutveckling: HTML, CSS/SASS, Javascript, Angular och Reactjs. Söker alltid nya utmaningar och sätt att utvecklas. Har ett stort intresse för design, teknik och problemlösning. Tidigare har jag arbetat inom service och kontor och studerar nu för att utvecklas mer tekniskt och kreativt i min yrkesroll. Har även studerat konst och design och har dessa som mina hobbies.</p>";
+    containerAboutMe.innerHTML = "<h3>Om mig</h3>" + "<p>Jag studerar just nu till front end developer/webbutvecklare distans på Medieinstitutet och tar examen juni 2023. I utbildningen får jag lära mig grunden till modern webbutveckling: HTML, CSS/SASS, Javascript, Angular och Reactjs. <br /> Söker alltid nya utmaningar och sätt att utvecklas. Har ett stort intresse för design, teknik och problemlösning. Tidigare har jag arbetat inom service och kontor och studerar nu för att utvecklas mer tekniskt och kreativt i min yrkesroll. Har även studerat konst och design och har dessa som mina hobbies.</p>";
     containerAbout.append(containerAboutMe, containerEducation, containerExperience, containerSkills);
 }

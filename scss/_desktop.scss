@@ -1,8 +1,11 @@
 .container {
-max-width: 2560px;
+  max-width: 2560px;
 }
+
 h3 {font-size: 1.7rem;}
 li {font-size: 1.3rem;}
+
+// home view //
 .container__intro {
     display: flex;
 
@@ -13,6 +16,7 @@ li {font-size: 1.3rem;}
     }
 }
 
+// nav //
 .menu__nav {
     display: flex;
     justify-content: center;
@@ -61,9 +65,48 @@ li {font-size: 1.3rem;}
         transform-origin: left;
       }
 }
+
+// about me view //
 .container__about {
     p {
-        margin: 2% 25%;
+        margin: auto;
+        padding: 5% 25%;
         font-size: 1.4rem;
     }
+}
+.container__education, .container__experience, .container__skills {
+
+  ul {
+  padding: 0 0 3% 5%;
+  
+  }
+}
+
+// portfolio view //
+.container__repos {
+
+  #githubUl {
+    align-items: center;
+  }
+
+    .repo__list {
+      padding: 3% 0;
+      font-size: 1.7rem;
+      width: 300px;
+      }
+  }
+// contact me view //
+.container__contact {
+  margin: auto;
+  width: 700px;
+  padding: 3% 0;
+
+  h4 {
+    margin: 1rem;
+  }
+
+  .contact__img {
+    width: 400px;
+    height: 400px;
+  }
 }
