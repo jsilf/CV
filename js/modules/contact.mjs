@@ -1,6 +1,6 @@
-/*--------------------
-CREATE CONTACT ME PAGE
-----------------------*/
+/*-------------
+KONTAKTA MIG VY
+---------------*/
 export const containerContact = document.createElement("footer");
 
 export function contact() {

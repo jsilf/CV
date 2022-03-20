@@ -1,8 +1,8 @@
 export const repoContainer = document.createElement("article");
 
-/*------------------------------
-PORTFOLIO PAGE WITH GITHUB REPOS
---------------------------------*/
+/*---------------------------
+PORTFOLIO VY MED GITHUB REPOS
+-----------------------------*/
 
 export function fetchRepositories() {
     repoContainer.innerHTML = "";

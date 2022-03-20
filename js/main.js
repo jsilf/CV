@@ -15,24 +15,24 @@ window.addEventListener("load", () => {
 intro();
 menu();
 
-/*-----------
-ABOUT ME PAGE
--------------*/
+/*-------
+OM MIG VY
+---------*/
 import { about, containerAbout } from './modules/about.mjs';
 
-/*------------------
-PORTFOLIO/FETCH PAGE
---------------------*/
+/*----------
+PORTFOLIO VY
+------------*/
 import { fetchRepositories, repoContainer } from './modules/portfolio.mjs';
 
 /*-------------
-CONTACT ME PAGE
+KONTAKTA MIG VY
 ---------------*/
 import { contact, containerContact } from './modules/contact.mjs';
 
-/*---------------
-INDEX PAGE + MENU
-----------------*/
+/*-----------
+HEM VY + MENU
+-------------*/
 function intro() {
     containerIntro.innerHTML = "";
     containerIntro.className = "container__intro";

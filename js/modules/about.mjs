@@ -1,16 +1,11 @@
-/*------------------
-CREATE ABOUT ME PAGE
---------------------*/
+/*-------
+OM MIG VY
+---------*/
 export const containerAbout = document.createElement("section");
 
 
 export function about() {
     containerAbout.innerHTML = "";
-
-
-    //Skippa eller ha på alla sidor??
-    // const line = document.createElement("hr");
-    // containerAbout.prepend(line);
 
     /*-------- 
     UTBILDNING
